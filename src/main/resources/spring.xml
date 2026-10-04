@@ -3,7 +3,16 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id = "alien" class="com.divyansh.Alien">
+
+<!--     How many times we mention bean that many times the object will be created-->
+    <bean id = "alien1" class="com.divyansh.Alien">
+    </bean>
+
+<!--    <bean id = "alien2" class="com.divyansh.Alien">-->
+<!--    </bean>-->
+
+<!--     Mentioning id is optional -->
+    <bean  id = "lap" class="com.divyansh.Laptop">
     </bean>
 
 </beans>
