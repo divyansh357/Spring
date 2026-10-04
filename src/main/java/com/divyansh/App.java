@@ -11,7 +11,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        ApplicationContext context = new ClassPathXmlApplicationContext();
+        // Configuring the Spring application through the XML Based Config
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         // BeanFactory not initialized or already closed - call 'refresh' before accessing beans via the ApplicationContext
         Alien obj = (Alien) context.getBean("alien");
         obj.code();
