@@ -16,6 +16,7 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml"); // Spring container is created and config file is passed - which will be used by Spring to know what classes it has to manage
         // BeanFactory not initialized or already closed - call 'refresh' before accessing beans via the ApplicationContext
        // Creating two references for a single bean - they will share the same object
+        // Scopes in Spring Core
         Alien obj1 = (Alien) context.getBean("alien1");
         obj1.age = 21;
         System.out.println(obj1.age);
