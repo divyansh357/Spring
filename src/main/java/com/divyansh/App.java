@@ -30,6 +30,7 @@ public class App
 
         Alien obj2 = (Alien) context.getBean("alien1");
         System.out.println(obj2.getAge());
+        obj2.code();
 
     }
 }

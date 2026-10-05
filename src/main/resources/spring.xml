@@ -16,12 +16,15 @@
 <!--    </bean>-->
 
 <!--     Mentioning id is optional -->
-    <bean  id = "lap" class="com.divyansh.Laptop">
+    <bean  id = "lap1" class="com.divyansh.Laptop">
     </bean>
 
-    <!--    Setter Injection-->
+    <!--    Setter Injection and  Ref Attribute-->
     <bean id = "alien1" class="com.divyansh.Alien" >
+        <!--    Setter Injection -->
         <property name="age" value="21"></property>
+        <!--   Setter Injection with the help of ref Attribute    -->
+        <property name="lap" ref="lap1"></property>
     </bean>
 
 </beans>
