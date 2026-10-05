@@ -17,13 +17,19 @@ public class App
         // BeanFactory not initialized or already closed - call 'refresh' before accessing beans via the ApplicationContext
        // Creating two references for a single bean - they will share the same object
         // Scopes in Spring Core
-        Alien obj1 = (Alien) context.getBean("alien1");
-        obj1.age = 21;
-        System.out.println(obj1.age);
+//        Alien obj1 = (Alien) context.getBean("alien1");
+//        obj1.age = 21;
+//        System.out.println(obj1.age);
 //        obj1.code();
 
-        Alien obj2 = (Alien) context.getBean("alien1");
-        System.out.println(obj2.age);
+//        Alien obj2 = (Alien) context.getBean("alien1");
+//        System.out.println(obj2.age);
 //        obj2.code();
+
+        // Setter Injection
+
+        Alien obj2 = (Alien) context.getBean("alien1");
+        System.out.println(obj2.getAge());
+
     }
 }

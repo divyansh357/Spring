@@ -6,8 +6,11 @@
 
 <!--     How many times we mention bean that many times the object will be created-->
 <!--    Scopes in Spring core - singleton and prototype -->
-    <bean id = "alien1" class="com.divyansh.Alien" scope="prototype">
-    </bean>
+
+<!--    <bean id = "alien1" class="com.divyansh.Alien" scope="prototype">-->
+<!--    </bean>-->
+
+
 
 <!--    <bean id = "alien2" class="com.divyansh.Alien">-->
 <!--    </bean>-->
@@ -16,6 +19,12 @@
     <bean  id = "lap" class="com.divyansh.Laptop">
     </bean>
 
+    <!--    Setter Injection-->
+    <bean id = "alien1" class="com.divyansh.Alien" >
+        <property name="age" value="21"></property>
+    </bean>
+
 </beans>
 
 <!-- Got the beans definition from spring docs for xml based config and declared a bean with id and class path -->
+
