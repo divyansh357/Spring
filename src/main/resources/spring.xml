@@ -21,10 +21,15 @@
 
     <!--    Setter Injection and  Ref Attribute-->
     <bean id = "alien1" class="com.divyansh.Alien" >
+
         <!--    Setter Injection -->
-        <property name="age" value="21"></property>
+        <!--        <property name="age" value="21"></property>-->
+
         <!--   Setter Injection with the help of ref Attribute    -->
         <property name="lap" ref="lap1"></property>
+
+        <!-- Constructor Injection  -->
+        <constructor-arg value="21"/>
     </bean>
 
 </beans>

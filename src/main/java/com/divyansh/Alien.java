@@ -7,6 +7,12 @@ public class Alien {
         System.out.println("Alien Object Created");
     }
 
+    // Para constructor for constructor injection
+    public Alien(int age){
+        System.out.println("parameterized constructor called");
+        this.age = age;
+    }
+
     public int getAge() {
         return age;
     }
