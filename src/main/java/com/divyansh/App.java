@@ -32,5 +32,9 @@ public class App
         System.out.println(obj2.getAge());
         obj2.code();
 
+        // For LazyInit Bean
+//        Desktop obj = (Desktop) context.getBean("com2");
+//        obj.compile();
+
     }
 }
