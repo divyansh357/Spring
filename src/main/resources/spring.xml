@@ -19,7 +19,7 @@
     <bean  id = "com1" class="com.divyansh.Laptop"  primary="true">
     </bean>
 
-    <bean  id = "com2" class="com.divyansh.Desktop" lazy-init="true">
+    <bean class="com.divyansh.Desktop" lazy-init="true">
     </bean>
 
     <!--    Setter Injection and  Ref Attribute-->
@@ -29,7 +29,7 @@
                 <property name="age" value="21" />
 
 <!--           Setter Injection with the help of ref Attribute-->
-                <property name="com" ref="com2" />
+                <property name="com" ref="com1" />
 
         <!-- Constructor Injection  -->
         <!--  By specifying the type       -->

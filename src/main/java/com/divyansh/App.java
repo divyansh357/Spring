@@ -28,13 +28,24 @@ public class App
 
         // Setter Injection
 
-        Alien obj2 = (Alien) context.getBean("alien1");
-        System.out.println(obj2.getAge());
-        obj2.code();
+//        Alien obj2 = (Alien) context.getBean("alien1");
+//        System.out.println(obj2.getAge());
+//        obj2.code();
 
         // For LazyInit Bean
 //        Desktop obj = (Desktop) context.getBean("com2");
 //        obj.compile();
+
+        // GetBean By Type
+        Alien obj2 = context.getBean("alien1",Alien.class);
+        System.out.println(obj2.getAge());
+        obj2.code();
+
+        Desktop obj = context.getBean(Desktop.class);
+        obj.compile();
+
+        Computer obj3 = context.getBean(Computer.class); // this returns the object of the primary Bean(if multiple present) which belongs to the class implementing Computer Interface
+
 
     }
 }
