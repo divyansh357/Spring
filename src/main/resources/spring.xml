@@ -15,12 +15,12 @@
 <!--    <bean id = "alien2" class="com.divyansh.Alien">-->
 <!--    </bean>-->
 
-<!--     Mentioning id is optional -->
-    <bean  id = "com" class="com.divyansh.Laptop">
+<!--     Mentioning id is optional , and Primary Bean -->
+    <bean  id = "com" class="com.divyansh.Laptop"  primary="true">
     </bean>
 
-<!--    <bean  id = "com1" class="com.divyansh.Desktop">-->
-<!--    </bean>-->
+    <bean  id = "com1" class="com.divyansh.Desktop">
+    </bean>
 
     <!--    Setter Injection and  Ref Attribute-->
     <bean id = "alien1" class="com.divyansh.Alien"  autowire="byType">
