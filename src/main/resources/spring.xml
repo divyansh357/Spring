@@ -16,20 +16,34 @@
 <!--    </bean>-->
 
 <!--     Mentioning id is optional -->
-    <bean  id = "lap1" class="com.divyansh.Laptop">
+    <bean  id = "com" class="com.divyansh.Laptop">
     </bean>
 
+<!--    <bean  id = "com1" class="com.divyansh.Desktop">-->
+<!--    </bean>-->
+
     <!--    Setter Injection and  Ref Attribute-->
-    <bean id = "alien1" class="com.divyansh.Alien" >
+    <bean id = "alien1" class="com.divyansh.Alien"  autowire="byType">
 
         <!--    Setter Injection -->
-        <!--        <property name="age" value="21"></property>-->
+                <property name="age" value="21" />
 
-        <!--   Setter Injection with the help of ref Attribute    -->
-        <property name="lap" ref="lap1"></property>
+<!--           Setter Injection with the help of ref Attribute-->
+<!--                <property name="com" ref="com" />-->
 
         <!-- Constructor Injection  -->
-        <constructor-arg value="21"/>
+        <!--  By specifying the type       -->
+<!--        <constructor-arg type = "com.divyansh.Laptop" ref="lap1"/>-->
+<!--        <constructor-arg type= "int" value="21"/>-->
+
+        <!--        By specifying name  : also use @ConstructorProperties({"age","lap"}) above the constructor  To take care of order-->
+<!--        <constructor-arg name = "lap" ref="lap1"/>-->
+<!--        <constructor-arg name  = "age" value="21"/>-->
+
+        <!-- By mentioning the index value  -->
+<!--        <constructor-arg index="1" ref="lap1"/>-->
+<!--        <constructor-arg index = "0" value="21"/>-->
+
     </bean>
 
 </beans>
