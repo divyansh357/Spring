@@ -16,11 +16,12 @@
 <!--    </bean>-->
 
 <!--     Mentioning id is optional , and Primary Bean -->
-    <bean  id = "com1" class="com.divyansh.Laptop"  primary="true">
-    </bean>
+<!--    <bean  id = "com1" class="com.divyansh.Laptop"  primary="true">-->
+<!--    </bean>-->
 
-    <bean class="com.divyansh.Desktop" lazy-init="true">
-    </bean>
+<!--    Lazy Bean-->
+<!--    <bean class="com.divyansh.Desktop" lazy-init="true">-->
+<!--    </bean>-->
 
     <!--    Setter Injection and  Ref Attribute-->
     <bean id = "alien1" class="com.divyansh.Alien"  autowire="byType">
@@ -29,7 +30,11 @@
                 <property name="age" value="21" />
 
 <!--           Setter Injection with the help of ref Attribute-->
-                <property name="com" ref="com1" />
+        <!-- Inner Bean - placing the bean inside the property tag of outer bean-->
+        <property name="com" >
+            <bean  id = "com1" class="com.divyansh.Laptop"  primary="true">
+            </bean>
+        </property>
 
         <!-- Constructor Injection  -->
         <!--  By specifying the type       -->

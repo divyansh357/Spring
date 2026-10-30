@@ -41,10 +41,10 @@ public class App
         System.out.println(obj2.getAge());
         obj2.code();
 
-        Desktop obj = context.getBean(Desktop.class);
-        obj.compile();
-
-        Computer obj3 = context.getBean(Computer.class); // this returns the object of the primary Bean(if multiple present) which belongs to the class implementing Computer Interface
+//        Desktop obj = context.getBean(Desktop.class);
+//        obj.compile();
+//
+//        Computer obj3 = context.getBean(Computer.class); // this returns the object of the primary Bean(if multiple present) which belongs to the class implementing Computer Interface
 
 
     }
