@@ -2,6 +2,7 @@ package com.divyansh;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.beans.ConstructorProperties;
@@ -32,6 +33,8 @@ public class Alien {
         return age;
     }
 
+    // Value Annotation
+    @Value("21")
     public void setAge(int age) {
         //System.out.println("Setter Called");
         this.age = age;
