@@ -1,5 +1,8 @@
 package com.divyansh;
 
+import org.springframework.stereotype.Component;
+
+@Component("com1")
 public class Laptop implements Computer {
 
 //    public Laptop(){

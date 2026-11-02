@@ -1,9 +1,18 @@
 package com.divyansh;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import java.beans.ConstructorProperties;
 
+@Component
 public class Alien {
     private int age;
+
+    // Field Injection
+//    @Autowired
+//    @Qualifier("desktop")
     private Computer com;
     public Alien(){
         //System.out.println("Alien Object Created");
@@ -12,6 +21,7 @@ public class Alien {
     // Para constructor for constructor injection
 
 
+    // Constructor Injection
 //    @ConstructorProperties({"age","lap"})  // to specify using name in any order
 //    public Alien(int age, Computer com) {
 //        this.age = age;
@@ -41,6 +51,8 @@ public class Alien {
         return com;
     }
 
+    // Setter Injection
+    @Autowired
     public void setCom(Computer com) {
         this.com = com;
     }
